@@ -1,0 +1,19 @@
+streamlit
+
+# LangChain core + providers
+langchain
+langchain-core
+langchain-groq
+langchain-huggingface
+
+# Embeddings
+sentence-transformers
+
+# Vector DB
+chromadb
+
+# Database
+mysql-connector-python
+
+# Utils
+python-dotenv
