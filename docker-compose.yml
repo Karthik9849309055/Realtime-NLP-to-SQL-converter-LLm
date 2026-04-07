@@ -1,6 +1,6 @@
 services:
   app:
-    build: .
+    build: ./app
     container_name: llm_app
     restart: always
     ports:
@@ -9,6 +9,11 @@ services:
       - .env
     volumes:
       - chroma_data:/app/chroma_store
+    networks:
+      - llm-net
 
 volumes:
   chroma_data:
+
+networks:
+  llm-net:

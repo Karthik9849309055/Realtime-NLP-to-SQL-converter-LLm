@@ -1,7 +1,6 @@
 streamlit
 
-# LangChain core + providers
-langchain
+# LangChain providers
 langchain-core
 langchain-groq
 langchain-huggingface
@@ -15,5 +14,5 @@ chromadb
 # Database
 mysql-connector-python
 
-# Utils
-python-dotenv
+# Data
+pandas
