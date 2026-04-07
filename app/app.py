@@ -23,12 +23,14 @@ st.markdown("""
     html, body, [class*="st-"] { font-family: 'Inter', sans-serif; }
 
     h1 {
-        background: linear-gradient(135deg, #6366f1, #8b5cf6, #a855f7);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         font-weight: 700;
         letter-spacing: -0.02em;
         margin-bottom: 0 !important;
+    }
+    .gradient-text {
+        background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     /* Run button */
@@ -123,7 +125,7 @@ with st.sidebar:
 # MAIN AREA
 # ──────────────────────────────────────────────
 
-st.title("🧠 Text → SQL Query Engine")
+st.markdown("<h1>🧠 <span class='gradient-text'>Text → SQL Query Engine</span></h1>", unsafe_allow_html=True)
 st.markdown(
     "Ask a question in **plain English** — the AI converts it to MySQL and runs it "
     "against a live cloud database in real time."
