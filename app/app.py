@@ -84,16 +84,16 @@ if "prefill" not in st.session_state:
 # ──────────────────────────────────────────────
 
 with st.sidebar:
-    st.markdown("## 🗄️ Database Schema")
+    st.markdown("## Database Schema")
     st.caption("Live MySQL database — `llm_db`")
     st.divider()
 
     # --- t_shirts table ---
-    st.markdown("### 📦 `t_shirts`")
+    st.markdown("###  `t_shirts`")
     st.markdown("""
 | Column | Type | Notes |
 |--------|------|-------|
-| `t_shirt_id` | INT | 🔑 Primary Key |
+| `t_shirt_id` | INT | Primary Key |
 | `brand` | ENUM | Van Huesen, Levi, Nike, Adidas |
 | `color` | ENUM | Red, Blue, Black, White |
 | `size` | ENUM | XS, S, M, L, XL |
@@ -104,12 +104,12 @@ with st.sidebar:
     st.divider()
 
     # --- discounts table ---
-    st.markdown("### 🏷️ `discounts`")
+    st.markdown("###  `discounts`")
     st.markdown("""
 | Column | Type | Notes |
 |--------|------|-------|
-| `discount_id` | INT | 🔑 Primary Key |
-| `t_shirt_id` | INT | 🔗 FK → t_shirts |
+| `discount_id` | INT |  Primary Key |
+| `t_shirt_id` | INT |  FK → t_shirts |
 | `pct_discount` | DECIMAL | 0 – 100 % |
 """)
 
@@ -136,33 +136,33 @@ st.divider()
 # ──────────────────────────────────────────────
 
 EXAMPLES = {
-    "📊 Inventory": [
+    "Inventory": [
         "How many Nike t-shirts are in stock?",
         "How many white XS t-shirts does Nike have?",
         "How many white Levi's t-shirts do we have?",
         "How many t-shirts are available for each brand?",
         "Which color has the highest total stock across all brands?",
     ],
-    "💰 Revenue": [
+    "Revenue": [
         "Total revenue if we sell all t-shirts today?",
         "Revenue from all Levi's t-shirts without any discount?",
         "Revenue from Levi's t-shirts after applying discounts?",
         "Revenue from Nike L-size t-shirts with discounts?",
         "Which brand has the highest total inventory value?",
     ],
-    "🏷️ Discounts & Joins": [
+    "Discounts & Joins": [
         "Which t-shirts have discounts applied?",
         "Which t-shirts have no discount?",
         "List all brands and their discounted revenue?",
     ],
-    "📈 Analytics": [
+    "Analytics": [
         "What is the average price of Nike t-shirts by size?",
         "What is the total price of all S-size t-shirts?",
         "Which size has the most stock across all brands?",
     ],
 }
 
-st.subheader("💡 Try an Example Query")
+st.subheader("Try an Example Query")
 st.caption("Click any card below — it fills the question box automatically.")
 
 # Callback to set prefill
@@ -188,7 +188,7 @@ st.divider()
 # QUERY INPUT
 # ──────────────────────────────────────────────
 
-st.subheader("🔍 Your Question")
+st.subheader("Your Question")
 
 question = st.text_input(
     "question",
@@ -197,7 +197,7 @@ question = st.text_input(
     label_visibility="collapsed",
 )
 
-run_btn = st.button("⚡  Run Query", type="primary")
+run_btn = st.button("Run Query", type="primary")
 
 # ──────────────────────────────────────────────
 # EXECUTION
