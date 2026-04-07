@@ -1,18 +1,21 @@
-streamlit
+streamlit>=1.32,<2.0
 
 # LangChain providers
-langchain-core
-langchain-groq
-langchain-huggingface
+langchain-core>=0.1,<1.0
+langchain-groq>=0.1,<1.0
+langchain-huggingface>=0.0.1,<1.0
 
 # Embeddings
-sentence-transformers
+sentence-transformers>=2.2,<3.0
 
 # Vector DB
-chromadb
+chromadb>=0.4.24,<0.5.0
+
+# Protobuf — must be pinned; chromadb's opentelemetry chain breaks on 5.x with Python 3.14
+protobuf>=4.25,<5.0
 
 # Database
-mysql-connector-python
+mysql-connector-python>=8.0,<9.0
 
 # Data
-pandas
+pandas>=2.0,<3.0
