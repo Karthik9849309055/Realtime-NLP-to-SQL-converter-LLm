@@ -13,11 +13,12 @@ jobs:
       - name: Ping MySQL Database
         env:
           MYSQL_HOST: ${{ secrets.MYSQL_HOST }}
-          MYSQL_PORT: ${{ secrets.MYSQL_PORT || '3306' }}
+          MYSQL_PORT: ${{ secrets.MYSQL_PORT }}
           MYSQL_USER: ${{ secrets.MYSQL_USER }}
           MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
           MYSQL_DB: ${{ secrets.MYSQL_DB }}
         run: |
           sudo apt-get install -y mysql-client
-          mysql -h "$MYSQL_HOST" -P "$MYSQL_PORT" -u "$MYSQL_USER" -p"$MYSQL_PASSWORD" "$MYSQL_DB" -e "SELECT 1;"
+          DB_PORT="${MYSQL_PORT:-3306}"
+          mysql -h "$MYSQL_HOST" -P "$DB_PORT" -u "$MYSQL_USER" -p"$MYSQL_PASSWORD" "$MYSQL_DB" -e "SELECT 1;"
           echo "Successfully pinged database to keep it awake!"
