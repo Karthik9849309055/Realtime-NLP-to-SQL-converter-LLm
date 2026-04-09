@@ -19,6 +19,10 @@ jobs:
           MYSQL_DB: ${{ secrets.MYSQL_DB }}
         run: |
           sudo apt-get install -y mysql-client
+          if [ -z "$MYSQL_HOST" ]; then
+            echo "::error::MYSQL_HOST secret is not set. Please add it in repository Settings → Secrets."
+            exit 1
+          fi
           DB_PORT="${MYSQL_PORT:-3306}"
-          mysql -h "$MYSQL_HOST" -P "$DB_PORT" -u "$MYSQL_USER" -p"$MYSQL_PASSWORD" "$MYSQL_DB" -e "SELECT 1;"
+          mysql --protocol=tcp -h "$MYSQL_HOST" -P "$DB_PORT" -u "$MYSQL_USER" -p"$MYSQL_PASSWORD" "$MYSQL_DB" -e "SELECT 1;"
           echo "Successfully pinged database to keep it awake!"
