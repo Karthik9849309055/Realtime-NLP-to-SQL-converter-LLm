@@ -3,7 +3,7 @@
 > Convert natural-language questions into SQL and execute them against a live MySQL database — powered by **Llama 3.1**, **LangChain**, **ChromaDB**, and **Streamlit**.
 
 #LIVE LINK
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://your-app-name.streamlit.app](https://realtime-nlp-to-sql-converter-llm-o56aszj4cuwcffusd6wfvs.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://your-app-name.streamlit.app](https://realtime-nlp-to-sql-converter-llm-o56aszj4cuwcffusd6wfvs.streamlit.app/))
 
 ---
 
