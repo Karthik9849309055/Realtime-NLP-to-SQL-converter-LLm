@@ -67,6 +67,4 @@ cp .env.exapmle .env
 streamlit run app.py
 ```
 
-## 📄 License
 
-MIT
