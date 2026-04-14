@@ -1,4 +1,4 @@
-# 🧠 Real-time NLP → SQL Query Engine
+#  Real-time NLP → SQL Query Engine
 
 > Convert natural-language questions into SQL and execute them against a live MySQL database — powered by **Llama 3.1**, **LangChain**, **ChromaDB**, and **Streamlit**.
 
@@ -6,7 +6,7 @@
 
 ---
 
-## ✨ Features
+##  Features
 
 | Feature | Detail |
 |---------|--------|
@@ -16,7 +16,7 @@
 | **Caching** | In-memory caching for both SQL generation and query results |
 | **Input Validation** | Rate limiting + SQL injection guard (SELECT-only queries) |
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 User Question
@@ -40,7 +40,7 @@ User Question
                     └──────────────┘
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **LLM**: Groq Cloud — Llama 3.1 8B Instant
 - **Embeddings**: sentence-transformers/all-MiniLM-L6-v2
@@ -49,7 +49,7 @@ User Question
 - **Framework**: LangChain + Streamlit
 - **Deployment**: Streamlit Community Cloud
 
-## 🚀 Quick Start (Local)
+##  Quick Start (Local)
 
 ```bash
 # 1. Clone the repo
