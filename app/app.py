@@ -250,7 +250,7 @@ if run_btn:
 
 st.divider()
 c1, c2, c3, c4 = st.columns(4)
-c1.markdown("**LLM** · Llama 3.1 8B")
+c1.markdown("**LLM** · GPT OSS 20B")
 c2.markdown("**Vector DB** · ChromaDB")
 c3.markdown("**Database** · MySQL")
 c4.markdown("**Framework** · LangChain")

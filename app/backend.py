@@ -54,7 +54,7 @@ def _get_llm():
     global _llm
     if _llm is None:
         _llm = ChatGroq(
-            model="llama-3.1-8b-instant",
+            model="openai/gpt-oss-20b",
             temperature=0,
             api_key=_secret("GROQ_API_KEY"),
         )
